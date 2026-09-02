@@ -18,16 +18,26 @@ const slideshowImages = [
 ];
 ---
 
+<!--
+    Bio content sourced from the campaign's official press release
+    ("FOR-RELEASE-Daniel-Guzman-for-State-Assembly.pdf"). The press release
+    describes Daniel as "a 30-year community advocate," while his existing
+    campaign flyer quotes him as having "nearly 40 years of community
+    service" — both are kept verbatim in their original context below
+    rather than reconciled, since they come from two different official
+    campaign materials.
+-->
 <BaseLayout
     title="About Daniel"
-    description="Daniel Guzman is a combat Marine veteran and community leader running for New York State Assembly, 94th District."
+    description="Daniel Guzman — Marine combat veteran, union worker, and community leader from the South Bronx — is running to make history in New York's 94th Assembly District."
 >
     <!-- Page Header -->
     <section class="bg-brand-navy text-white py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
             <h1 class="font-heading text-4xl sm:text-5xl font-bold mb-4">About Daniel Guzman</h1>
             <p class="text-xl text-blue-200 max-w-2xl mx-auto">
-                Marine veteran. Community leader. Putting people first in the 94th District.
+                Marine combat veteran. Union worker. Community leader. Putting people first in the
+                94th District.
             </p>
         </div>
     </section>
@@ -42,13 +52,14 @@ const slideshowImages = [
 
             <!-- Bio Content -->
             <div>
-                <h2 class="font-heading text-3xl font-bold text-brand-navy mb-6">Service Over Politics</h2>
+                <h2 class="font-heading text-3xl font-bold text-brand-navy mb-6">From the South Bronx to Putnam County</h2>
                 <div class="space-y-4 text-gray-700 leading-relaxed">
                     <p>
-                        Daniel Guzman is a combat Marine veteran with nearly 40 years of community
-                        service. He's running for New York State Assembly in the 94th District — covering
-                        Westchester and Putnam Counties — to bring disciplined, accountable leadership
-                        back to Albany.
+                        Daniel Guzman was raised in the South Bronx before spending eight years in the
+                        United States Marine Corps, including two tours overseas and one combat tour in
+                        Iraq. Ten years ago he settled in Patterson, where he and his wife are raising
+                        their two boys in the Carmel schools. Daniel currently works as a custodian in
+                        the Mahopac school district.
                     </p>
                     <p>
                         &ldquo;I'm a combat Marine veteran with nearly 40 years of community service,
@@ -57,17 +68,89 @@ const slideshowImages = [
                         Counties.&rdquo;
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <h2 class="font-heading text-3xl font-bold text-brand-navy mt-10 mb-6">A Marine's Commitment to Service</h2>
+    <!-- Making History -->
+    <section class="py-16 bg-brand-navy text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="grid sm:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="font-heading text-4xl font-bold text-white mb-2">8 Years</div>
+                    <p class="text-blue-200 text-sm">Served in the U.S. Marine Corps, including a combat tour in Iraq</p>
+                </div>
+                <div>
+                    <div class="font-heading text-4xl font-bold text-white mb-2">100+ Years</div>
+                    <p class="text-blue-200 text-sm">Since a Democrat has represented this gerrymandered Assembly seat</p>
+                </div>
+                <div>
+                    <div class="font-heading text-4xl font-bold text-white mb-2">A First</div>
+                    <p class="text-blue-200 text-sm">Daniel would be the first Latino and first combat veteran to represent NY's 94th District</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Community -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="font-heading text-3xl font-bold text-brand-navy mb-6">Building Community</h2>
                 <div class="space-y-4 text-gray-700 leading-relaxed">
                     <p>
-                        Daniel's commitment to service began in the United States Marine Corps, where he
-                        served as a combat veteran. That same discipline and dedication now drives his
-                        campaign — putting people first, and bringing the same accountability he learned
-                        in uniform to New York State government.
+                        In 2014, Daniel founded Musart Music Management, creating opportunities and
+                        resources for emerging artists. In 2023, he expanded his community work by
+                        founding Palante Para Todos, a nonprofit serving communities through mental
+                        health advocacy, food distribution, youth outreach, and multicultural community
+                        events across New York and Florida. He still leads both organizations today.
+                    </p>
+                    <p>
+                        As a proud Puerto Rican, Daniel has created programs and events that celebrate
+                        his culture — teaching dance and music to youth and organizing celebrations that
+                        bring families closer to their heritage. His dedication to service has earned him
+                        a Certificate of Merit from the Mayor's Office, a citation from the Bronx Borough
+                        President, and a New York Senate proclamation.
                     </p>
                 </div>
             </div>
+            <div>
+                <img
+                    src={`${base}images/daniel-community-photo.jpg`}
+                    alt="Daniel Guzman in his Putnam County community"
+                    class="w-full rounded-2xl shadow-lg border border-gray-200 object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Fighting for Working Families -->
+    <section class="py-20 bg-brand-light">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="font-heading text-3xl font-bold text-brand-navy mb-6">Fighting for Working Families</h2>
+            <p class="text-gray-700 leading-relaxed">
+                As a union worker, Daniel has personally fought for dignity in the workplace, fair
+                treatment, and accountability. He understands the needs of working families because he
+                lives that life — juggling schedules and family duties in pursuit of the American
+                dream. In Albany, he will advocate for policies to improve wages, reduce the cost
+                burden on families, and expand services like childcare that keep working families
+                working.
+            </p>
+        </div>
+    </section>
+
+    <!-- Marine's Commitment to Service -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="font-heading text-3xl font-bold text-brand-navy mb-6">A Marine's Commitment to Service</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Daniel's commitment to service began in the United States Marine Corps, where he
+                completed a combat tour in Iraq. Like many who serve, he faced his own challenges
+                coming home from war — and that experience shapes his understanding of what veterans
+                need to succeed here at home. He is a strong believer in mental health and social
+                support programs, and will advocate for state funding and partnerships to expand
+                services for veterans.
+            </p>
         </div>
     </section>
 
@@ -82,7 +165,7 @@ const slideshowImages = [
                     [
                         {
                             title: "Service",
-                            desc: "Daniel's nearly 40 years of community service — grounded in his time as a U.S. Marine — shape a campaign built on service over politics.",
+                            desc: "From eight years in the Marine Corps to founding two community organizations, Daniel's life has been shaped by service over politics.",
                         },
                         {
                             title: "Accountability",
@@ -90,7 +173,7 @@ const slideshowImages = [
                         },
                         {
                             title: "Community",
-                            desc: "From Westchester to Putnam County, Daniel is committed to putting people first — families, schools, and safer neighborhoods for every resident of the 94th District.",
+                            desc: "From the South Bronx to Putnam County, Daniel has spent his life building community — through his nonprofit work, his culture, and his neighbors.",
                         },
                     ].map((value) => (
                         <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
