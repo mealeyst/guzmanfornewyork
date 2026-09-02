@@ -1,0 +1,127 @@
+---
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Daniel" },
+    { href: "/issues", label: "The Issues" },
+    { href: "/get-involved", label: "Get Involved" },
+    { href: "/contact", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-[96px]">
+            <!-- Wordmark -->
+            <a href="/" class="flex flex-col leading-none group">
+                <span class="font-heading font-bold text-2xl tracking-tight text-brand-navy">
+                    DANIEL <span class="text-brand-red">GUZMAN</span>
+                </span>
+                <span class="text-[10px] font-semibold tracking-widest text-gray-500 uppercase mt-1">
+                    NY Assembly &middot; 94th District
+                </span>
+            </a>
+
+            <!-- Desktop nav -->
+            <nav class="hidden md:flex items-center gap-1">
+                {
+                    navLinks.map((link) => (
+                        <a
+                            href={link.href}
+                            class:list={[
+                                "px-3 py-2 rounded text-sm font-medium transition-colors",
+                                currentPath === link.href
+                                    ? "bg-gray-100 text-brand-navy"
+                                    : "text-brand-navy hover:bg-gray-100",
+                            ]}
+                        >
+                            {link.label}
+                        </a>
+                    ))
+                }
+                <a
+                    href="/get-involved#donate"
+                    class="ml-2 bg-brand-red hover:bg-red-700 text-white px-4 py-2 rounded font-semibold text-sm transition-colors"
+                >
+                    Donate
+                </a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <button
+                id="mobile-menu-toggle"
+                aria-label="Toggle navigation menu"
+                class="md:hidden text-brand-navy p-2"
+            >
+                <svg
+                    id="icon-menu"
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg
+                    id="icon-close"
+                    class="w-6 h-6 hidden"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <nav class="px-4 pt-2 pb-4 flex flex-col gap-1">
+            {
+                navLinks.map((link) => (
+                    <a
+                        href={link.href}
+                        class:list={[
+                            "px-3 py-2 rounded text-sm font-medium transition-colors",
+                            currentPath === link.href
+                                ? "bg-gray-100 text-brand-navy"
+                                : "text-brand-navy hover:bg-gray-100",
+                        ]}
+                    >
+                        {link.label}
+                    </a>
+                ))
+            }
+            <a
+                href="/get-involved#donate"
+                class="mt-2 bg-brand-red text-white px-4 py-2 rounded font-semibold text-sm text-center"
+            >
+                Donate
+            </a>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const toggle = document.getElementById("mobile-menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    const iconMenu = document.getElementById("icon-menu");
+    const iconClose = document.getElementById("icon-close");
+
+    toggle?.addEventListener("click", () => {
+        const isOpen = !menu?.classList.contains("hidden");
+        menu?.classList.toggle("hidden", isOpen);
+        iconMenu?.classList.toggle("hidden", !isOpen);
+        iconClose?.classList.toggle("hidden", isOpen);
+    });
+</script>

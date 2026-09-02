@@ -1,0 +1,92 @@
+---
+import { EnvelopeSimple, FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-white text-gray-700 border-t border-gray-200 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Brand -->
+            <div>
+                <span class="font-heading font-bold text-xl tracking-tight text-brand-navy block mb-2">
+                    DANIEL <span class="text-brand-red">GUZMAN</span>
+                </span>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Putting people first in New York's 94th Assembly District — Westchester and Putnam
+                    Counties.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-brand-navy font-semibold mb-3 text-sm uppercase tracking-wide">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/about" class="hover:text-brand-navy transition-colors">About Daniel</a></li>
+                    <li><a href="/issues" class="hover:text-brand-navy transition-colors">The Issues</a></li>
+                    <li>
+                        <a href="/get-involved" class="hover:text-brand-navy transition-colors"
+                            >Get Involved</a
+                        >
+                    </li>
+                    <li>
+                        <a href="/contact" class="hover:text-brand-navy transition-colors">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact / Social -->
+            <div>
+                <h3 class="text-brand-navy font-semibold mb-3 text-sm uppercase tracking-wide">
+                    Connect
+                </h3>
+                <ul class="space-y-2 text-sm">
+                    <li>
+                        <a
+                            href="/contact"
+                            class="inline-flex items-center gap-2 hover:text-brand-navy transition-colors"
+                        >
+                            <EnvelopeSimple size={20} weight="regular" color="#0a1f44" />
+                            <span>Send a Message</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.facebook.com/DanielGuzman4AssemblyDistrict94"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Daniel Guzman on Facebook"
+                            class="inline-flex items-center gap-2 hover:text-brand-navy transition-colors"
+                        >
+                            <FacebookLogo size={20} weight="fill" color="#0a1f44" />
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/Guzman4NewYork/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Daniel Guzman on Instagram"
+                            class="inline-flex items-center gap-2 hover:text-brand-navy transition-colors"
+                        >
+                            <InstagramLogo size={20} weight="regular" color="#0a1f44" />
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-gray-200 text-xs text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
+            <!--
+                Sourced from Daniel's existing printed campaign banner. Confirm this
+                matches the exact text required on his official NYS/FEC filing before launch.
+            -->
+            <p>Paid for by Guzman 4 New York.</p>
+            <p>&copy; {currentYear} Daniel Guzman for New York State Assembly</p>
+        </div>
+    </div>
+</footer>
