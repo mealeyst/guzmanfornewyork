@@ -3,10 +3,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Slideshow from "@/components/Slideshow";
 import VolunteerForm from "@/components/VolunteerForm";
 
+const base = import.meta.env.BASE_URL;
+
 const eventSlideshowImages = [
-    { src: "/images/campaign-banner-supporters.jpg", alt: "Daniel Guzman with supporters at a campaign gathering" },
-    { src: "/images/campaign-photobooth-group.jpg", alt: "Supporters at a Daniel Guzman campaign event" },
-    { src: "/images/campaign-summer-gathering.jpg", alt: "Guests at a #VoteGuzman campaign gathering" },
+    { src: `${base}images/campaign-banner-supporters.jpg`, alt: "Daniel Guzman with supporters at a campaign gathering" },
+    { src: `${base}images/campaign-photobooth-group.jpg`, alt: "Supporters at a Daniel Guzman campaign event" },
+    { src: `${base}images/campaign-summer-gathering.jpg`, alt: "Guests at a #VoteGuzman campaign gathering" },
 ];
 ---
 

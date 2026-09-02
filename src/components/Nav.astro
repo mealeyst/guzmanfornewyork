@@ -1,12 +1,15 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Daniel" },
-    { href: "/issues", label: "The Issues" },
-    { href: "/get-involved", label: "Get Involved" },
-    { href: "/contact", label: "Contact" },
+    { href: base, label: "Home" },
+    { href: `${base}about`, label: "About Daniel" },
+    { href: `${base}issues`, label: "The Issues" },
+    { href: `${base}get-involved`, label: "Get Involved" },
+    { href: `${base}contact`, label: "Contact" },
 ];
 
+const donateHref = `${base}get-involved#donate`;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -14,7 +17,7 @@ const currentPath = Astro.url.pathname;
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between h-[96px]">
             <!-- Wordmark -->
-            <a href="/" class="flex flex-col leading-none group">
+            <a href={base} class="flex flex-col leading-none group">
                 <span class="font-heading font-bold text-2xl tracking-tight text-brand-navy">
                     DANIEL <span class="text-brand-red">GUZMAN</span>
                 </span>
@@ -41,7 +44,7 @@ const currentPath = Astro.url.pathname;
                     ))
                 }
                 <a
-                    href="/get-involved#donate"
+                    href={donateHref}
                     class="ml-2 bg-brand-red hover:bg-red-700 text-white px-4 py-2 rounded font-semibold text-sm transition-colors"
                 >
                     Donate
@@ -103,7 +106,7 @@ const currentPath = Astro.url.pathname;
                 ))
             }
             <a
-                href="/get-involved#donate"
+                href={donateHref}
                 class="mt-2 bg-brand-red text-white px-4 py-2 rounded font-semibold text-sm text-center"
             >
                 Donate

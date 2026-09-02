@@ -2,17 +2,19 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Slideshow from "@/components/Slideshow";
 
+const base = import.meta.env.BASE_URL;
+
 const slideshowImages = [
-    { src: "/images/daniel-headshot-official.jpg", alt: "Official portrait of Daniel Guzman" },
+    { src: `${base}images/daniel-headshot-official.jpg`, alt: "Official portrait of Daniel Guzman" },
     {
-        src: "/images/daniel-dress-blues-speech.jpg",
+        src: `${base}images/daniel-dress-blues-speech.jpg`,
         alt: "Daniel Guzman speaking in his U.S. Marine Corps dress uniform in front of an American flag",
     },
     {
-        src: "/images/daniel-veteran-ceremony.jpg",
+        src: `${base}images/daniel-veteran-ceremony.jpg`,
         alt: "Daniel Guzman with a fellow Marine Corps veteran at a ceremony",
     },
-    { src: "/images/daniel-with-mother.jpg", alt: "Daniel Guzman with his mother at a military ceremony" },
+    { src: `${base}images/daniel-with-mother.jpg`, alt: "Daniel Guzman with his mother at a military ceremony" },
 ];
 ---
 
@@ -110,13 +112,13 @@ const slideshowImages = [
             </p>
             <div class="flex flex-wrap gap-4 justify-center">
                 <a
-                    href="/get-involved"
+                    href={`${base}get-involved`}
                     class="bg-brand-red hover:bg-red-700 text-white px-6 py-3 rounded font-semibold transition-colors"
                 >
                     Get Involved
                 </a>
                 <a
-                    href="/contact"
+                    href={`${base}contact`}
                     class="border-2 border-white text-white hover:bg-white hover:text-brand-navy px-6 py-3 rounded font-semibold transition-colors"
                 >
                     Contact Daniel
