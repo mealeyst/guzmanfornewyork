@@ -4,6 +4,10 @@ on:
     push:
         branches:
             - main
+            # TEMPORARY: lets the candidate preview this PR's branch before
+            # it's merged. Remove this line once scaffold-site is merged —
+            # pushes to main will already trigger a deploy.
+            - scaffold-site
     workflow_dispatch:
 
 permissions:
