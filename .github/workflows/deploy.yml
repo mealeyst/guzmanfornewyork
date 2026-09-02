@@ -1,0 +1,40 @@
+name: Deploy to Vercel
+
+on:
+    push:
+        branches:
+            - main
+
+# NOTE: VERCEL_ORG_ID / VERCEL_PROJECT_ID below are placeholders.
+# Run `vercel link` locally (after `vercel login`) to create/link the Vercel
+# project, then replace these with the real IDs from .vercel/project.json.
+# Also add VERCEL_TOKEN as a repo secret: gh secret set VERCEL_TOKEN
+env:
+    VERCEL_ORG_ID: REPLACE_WITH_VERCEL_ORG_ID
+    VERCEL_PROJECT_ID: REPLACE_WITH_VERCEL_PROJECT_ID
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Install Vercel CLI
+              run: npm install --global vercel@latest
+
+            - name: Pull Vercel environment
+              run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+            - name: Build project
+              run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+            - name: Deploy prebuilt output
+              run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}

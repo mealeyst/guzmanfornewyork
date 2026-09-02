@@ -1,0 +1,90 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactForm from "@/components/ContactForm";
+import { FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
+---
+
+<BaseLayout
+    title="Contact"
+    description="Get in touch with the Daniel Guzman for New York State Assembly campaign."
+>
+    <!-- Page Header -->
+    <section class="bg-brand-navy text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold mb-4">Contact Us</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto">
+                Have a question, concern, or want to connect with Daniel? We'd love to hear from you.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div>
+                <h2 class="font-heading text-2xl font-bold text-brand-navy mb-6">Get in Touch</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-1">Email</h3>
+                        <a href="mailto:Guzman4NewYork@gmail.com" class="text-brand-navy hover:underline">
+                            Guzman4NewYork@gmail.com
+                        </a>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-1">Follow Daniel</h3>
+                        <div class="flex gap-4">
+                            <a
+                                href="https://www.facebook.com/DanielGuzman4AssemblyDistrict94"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Daniel Guzman on Facebook"
+                                class="inline-flex items-center gap-2 text-brand-navy hover:underline text-sm"
+                            >
+                                <FacebookLogo size={24} weight="fill" color="#0a1f44" />
+                                <span>Facebook</span>
+                            </a>
+                            <a
+                                href="https://www.instagram.com/Guzman4NewYork/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Daniel Guzman on Instagram"
+                                class="inline-flex items-center gap-2 text-brand-navy hover:underline text-sm"
+                            >
+                                <InstagramLogo size={24} weight="regular" color="#0a1f44" />
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-light rounded-xl p-5 border border-gray-200">
+                        <h3 class="font-bold text-brand-navy mb-2">Volunteering &amp; Events</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            To sign up to volunteer or get information about upcoming campaign events,
+                            visit our
+                            <a href="/get-involved" class="text-brand-navy hover:underline font-medium"
+                                >Get Involved page</a
+                            >.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light rounded-xl p-5 border border-gray-200">
+                        <h3 class="font-bold text-brand-navy mb-2">Support the Campaign</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            Ready to pitch in? Visit
+                            <a href="/get-involved#donate" class="text-brand-navy hover:underline font-medium"
+                                >our donate page</a
+                            > to support Daniel's campaign for the 94th District.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <h2 class="font-heading text-2xl font-bold text-brand-navy mb-6">Send a Message</h2>
+                <ContactForm client:load />
+            </div>
+        </div>
+    </section>
+</BaseLayout>
