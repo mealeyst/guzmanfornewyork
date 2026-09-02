@@ -29,3 +29,6 @@ pnpm-debug.log*
 
 # raw Facebook photo exports (kept locally; curated copies live in public/images)
 /assets/
+
+# local Claude Code session state
+/.claude/
