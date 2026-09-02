@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!--
@@ -55,7 +57,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                         </ul>
                         <figure class="h-full flex flex-col md:order-2 order-1">
                             <img
-                                src="/images/campaign-summer-gathering.jpg"
+                                src={`${base}images/campaign-summer-gathering.jpg`}
                                 alt="Daniel Guzman with supporters at a campaign gathering"
                                 class="w-full flex-1 min-h-0 rounded-xl shadow-md object-cover"
                             />
@@ -87,7 +89,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                         <figure class="h-full flex flex-col">
                             <img
-                                src="/images/campaign-photobooth-1.jpg"
+                                src={`${base}images/campaign-photobooth-1.jpg`}
                                 alt="Daniel Guzman with community members at a campaign event"
                                 class="w-full flex-1 min-h-0 rounded-xl shadow-md object-cover"
                             />
@@ -148,7 +150,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                         </ul>
                         <figure class="h-full flex flex-col md:order-2 order-1">
                             <img
-                                src="/images/campaign-photobooth-2.jpg"
+                                src={`${base}images/campaign-photobooth-2.jpg`}
                                 alt="Daniel Guzman with community members at a campaign event"
                                 class="w-full flex-1 min-h-0 rounded-xl shadow-md object-cover"
                             />
@@ -180,7 +182,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                         <figure class="h-full flex flex-col">
                             <img
-                                src="/images/campaign-photobooth-3.jpg"
+                                src={`${base}images/campaign-photobooth-3.jpg`}
                                 alt="Daniel Guzman with community members at a campaign event"
                                 class="w-full flex-1 min-h-0 rounded-xl shadow-md object-cover"
                             />
@@ -216,7 +218,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                 Help Daniel carry this message to every doorstep in the 94th District.
             </p>
             <a
-                href="/get-involved"
+                href={`${base}get-involved`}
                 class="inline-block bg-white text-brand-navy hover:bg-blue-50 px-6 py-3 rounded font-semibold text-lg transition-colors"
             >
                 Get Involved Today

@@ -1,6 +1,7 @@
 ---
 import { EnvelopeSimple, FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
 
+const base = import.meta.env.BASE_URL;
 const currentYear = new Date().getFullYear();
 ---
 
@@ -24,15 +25,15 @@ const currentYear = new Date().getFullYear();
                     Quick Links
                 </h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="/about" class="hover:text-brand-navy transition-colors">About Daniel</a></li>
-                    <li><a href="/issues" class="hover:text-brand-navy transition-colors">The Issues</a></li>
+                    <li><a href={`${base}about`} class="hover:text-brand-navy transition-colors">About Daniel</a></li>
+                    <li><a href={`${base}issues`} class="hover:text-brand-navy transition-colors">The Issues</a></li>
                     <li>
-                        <a href="/get-involved" class="hover:text-brand-navy transition-colors"
+                        <a href={`${base}get-involved`} class="hover:text-brand-navy transition-colors"
                             >Get Involved</a
                         >
                     </li>
                     <li>
-                        <a href="/contact" class="hover:text-brand-navy transition-colors">Contact</a>
+                        <a href={`${base}contact`} class="hover:text-brand-navy transition-colors">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +46,7 @@ const currentYear = new Date().getFullYear();
                 <ul class="space-y-2 text-sm">
                     <li>
                         <a
-                            href="/contact"
+                            href={`${base}contact`}
                             class="inline-flex items-center gap-2 hover:text-brand-navy transition-colors"
                         >
                             <EnvelopeSimple size={20} weight="regular" color="#0a1f44" />

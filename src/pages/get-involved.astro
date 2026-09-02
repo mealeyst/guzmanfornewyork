@@ -3,10 +3,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Slideshow from "@/components/Slideshow";
 import VolunteerForm from "@/components/VolunteerForm";
 
+const base = import.meta.env.BASE_URL;
+
 const eventSlideshowImages = [
-    { src: "/images/campaign-banner-supporters.jpg", alt: "Daniel Guzman with supporters at a campaign gathering" },
-    { src: "/images/campaign-photobooth-group.jpg", alt: "Supporters at a Daniel Guzman campaign event" },
-    { src: "/images/campaign-summer-gathering.jpg", alt: "Guests at a #VoteGuzman campaign gathering" },
+    { src: `${base}images/campaign-banner-supporters.jpg`, alt: "Daniel Guzman with supporters at a campaign gathering" },
+    { src: `${base}images/campaign-photobooth-group.jpg`, alt: "Supporters at a Daniel Guzman campaign event" },
+    { src: `${base}images/campaign-summer-gathering.jpg`, alt: "Guests at a #VoteGuzman campaign gathering" },
 ];
 ---
 
@@ -62,7 +64,7 @@ const eventSlideshowImages = [
                     ].map((way) => (
                         <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
                             <div class="flex justify-center mb-4">
-                                <svg class="w-10 h-10 text-brand-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-8 h-8 text-brand-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <Fragment set:html={way.icon} />
                                 </svg>
                             </div>
@@ -116,7 +118,7 @@ const eventSlideshowImages = [
                         return (
                             <a
                                 href={href}
-                                class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-3 rounded font-semibold transition-colors min-w-[4rem]"
+                                class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-4 py-3 rounded font-semibold transition-colors min-w-[4rem]"
                             >
                                 {label}
                             </a>
@@ -127,12 +129,12 @@ const eventSlideshowImages = [
 
             <a
                 href="https://secure.actblue.com/donate/guzman2026?refcode=getinvolved_main"
-                class="inline-block bg-brand-red hover:bg-red-700 text-white px-8 py-4 rounded font-bold text-xl transition-colors"
+                class="inline-block bg-brand-red hover:bg-red-700 text-white px-4 py-4 rounded font-bold text-xl transition-colors"
             >
                 Donate Now
             </a>
 
-            <p class="mt-6 text-xs text-blue-300">Paid for by Guzman 4 New York.</p>
+            <p class="mt-4 text-xs text-blue-300">Paid for by Guzman 4 New York.</p>
         </div>
     </section>
 </BaseLayout>
